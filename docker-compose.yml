@@ -1,0 +1,29 @@
+version: '3'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+#    depends_on:
+#      - nginx
+    environment:
+      - DB_HOST=db
+      - DB_NAME=mydatabase
+      - DB_USER=myuser
+      - DB_PASSWORD=mypassword
+    command: python3 manage.py runserver 0.0.0.0:8000
+  nginx:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    volumes:
+      - ./server:/etc/nginx/conf.d
+    ports:
+      - 80:80
+    depends_on:
+      - django
+#    command: service nginx start
