@@ -5,5 +5,5 @@ from django.urls import path, include
 from apps.chofer.views import lista_choferes
 
 urlpatterns = [
-    path('lista/', login_required(lista_choferes), name='lista_choferes'),
+    path('lista/', lista_choferes, name='lista_choferes'),
 ]
