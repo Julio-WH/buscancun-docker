@@ -15,7 +15,7 @@ services:
       - DB_NAME=mydatabase
       - DB_USER=myuser
       - DB_PASSWORD=mypassword
-    command: python3 manage.py runserver 0.0.0.0:8000
+#    command: python3 manage.py runserver 0.0.0.0:8000
   nginx:
     build:
       context: .
