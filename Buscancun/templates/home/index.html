@@ -17,5 +17,23 @@
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+const ws = new WebSocket("ws://"+window.location.host+"/ws/")
+
+ws.onopen = () => {
+  console.log('Conexión WebSocket establecida.');
+};
+
+ws.onmessage = (event) => {
+  const message = JSON.parse(event.data);
+  console.log('Mensaje recibido:', message);
+
+  // Aquí puedes manipular el mensaje recibido y mostrarlo en tu página web
+  // Por ejemplo, puedes agregarlo a un div en tu HTML
+  const messageDiv = document.createElement('div');
+  messageDiv.textContent = message.message;
+  document.body.appendChild(messageDiv);
+};
+
 </script>
 </html>
