@@ -20,19 +20,25 @@
 }).addTo(map);
 
 const ws = new WebSocket("ws://"+window.location.host+"/ws/")
-
+let autobuses_list = [];
 ws.onopen = () => {
+    ws.send(JSON.stringify({
+            action: "list",
+            request_id: new Date().getTime(),
+        }))
   console.log('Conexión WebSocket establecida.');
 };
 
 ws.onmessage = (event) => {
-  const message = JSON.parse(event.data);
-  console.log('Mensaje recibido:', message);
+  const allData = JSON.parse(event.data);
+  autobuses_list = allData.data;
+  console.log(autobuses_list)
+  {#console.log('Mensaje recibido:', autobuses_list);#}
 
   // Aquí puedes manipular el mensaje recibido y mostrarlo en tu página web
   // Por ejemplo, puedes agregarlo a un div en tu HTML
   const messageDiv = document.createElement('div');
-  messageDiv.textContent = message.message;
+  messageDiv.textContent = autobuses_list;
   document.body.appendChild(messageDiv);
 };
 
