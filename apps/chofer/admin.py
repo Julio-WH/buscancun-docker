@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from apps.chofer.models import Chofer
+from apps.chofer.models import Chofer, Autobus
 
 
 # Register your models here.
@@ -8,3 +8,8 @@ from apps.chofer.models import Chofer
 @admin.register(Chofer)
 class Chofer(admin.ModelAdmin):
     model = Chofer
+
+
+@admin.register(Autobus)
+class Autobus(admin.ModelAdmin):
+    model = Autobus
