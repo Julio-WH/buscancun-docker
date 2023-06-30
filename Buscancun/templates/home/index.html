@@ -10,6 +10,7 @@
 <h1>Bienvenido a Buscaribe</h1>
 
  <div id="map" style="height: 700px"></div>
+ <div id="table-container"></div>
 </body>
 <script type="text/javascript">
     var map = L.map('map').setView([21.162310281950226, -86.8530133090876], 14);
@@ -31,16 +32,69 @@ ws.onopen = () => {
 
 ws.onmessage = (event) => {
   const allData = JSON.parse(event.data);
-  autobuses_list = allData.data;
-  console.log(autobuses_list)
-  {#console.log('Mensaje recibido:', autobuses_list);#}
+  if (allData.action === 'list'){
+      autobuses_list = allData.data;
+      if(autobuses_list.length){
+          tabla_autobuses()
+      }
 
-  // Aquí puedes manipular el mensaje recibido y mostrarlo en tu página web
-  // Por ejemplo, puedes agregarlo a un div en tu HTML
-  const messageDiv = document.createElement('div');
-  messageDiv.textContent = autobuses_list;
-  document.body.appendChild(messageDiv);
+  }
+  else if(allData.action === 'update'){
+      const targetId = allData.data.id;
+      const targetObject = autobuses_list.findIndex(obj => obj.id === targetId);
+      if (targetObject !== -1) {
+          // Modificar los valores o propiedades del objeto
+          console.log(targetObject)
+          autobuses_list[targetObject] = allData.data;
+          actualizar_tabla()
+      }
+    }
+
 };
 
+function tabla_autobuses(){
+    //Tabla//
+    const tableContainer = document.getElementById("table-container");
+    // Crear la estructura de la tabla
+    const table = document.createElement("table");
+    table.id = "tabla_autobuses";
+    table.classList.add("table"); // Opcional: agregar una clase CSS a la tabla
+    // Crear la fila de encabezado
+    const headerRow = document.createElement("tr");
+    const keys = Object.keys(autobuses_list[0]);
+    // Crear las celdas de encabezado
+    keys.forEach(key => {
+        const cell = document.createElement("th");
+        cell.textContent = key;
+        headerRow.appendChild(cell);
+    });
+    // Agregar la fila de encabezado a la tabla
+    table.appendChild(headerRow);
+    // Crear las filas de datos
+    autobuses_list.forEach(rowData => {
+        const row = document.createElement("tr");
+
+        // Crear las celdas de datos
+        keys.forEach(key => {
+            const cell = document.createElement("td");
+            cell.textContent = rowData[key];
+            row.appendChild(cell);
+        });
+
+        // Agregar la fila de datos a la tabla
+        table.appendChild(row);
+    });
+    // Agregar la tabla al contenedor
+    tableContainer.appendChild(table);
+
+}
+
+function actualizar_tabla(){
+    const divElement = document.getElementById("tabla_autobuses");
+
+    // Elimina el elemento <div>
+    divElement.remove();
+    tabla_autobuses()
+}
 </script>
 </html>
