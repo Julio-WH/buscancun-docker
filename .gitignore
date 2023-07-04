@@ -32,6 +32,9 @@ ENV/
 env.bak/
 venv.bak/
 
+#Logs
+.logs
+
 # Ignore collectstatic's directories
 .static/*
 .media/*
