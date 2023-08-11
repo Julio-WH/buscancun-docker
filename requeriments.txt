@@ -3,3 +3,4 @@ channels==3.0.0
 Django==3.2
 djangorestframework==3.13.1
 uvicorn==0.22.0
+uvicorn[standard]
