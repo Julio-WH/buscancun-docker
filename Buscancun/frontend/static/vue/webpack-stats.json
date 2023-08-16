@@ -1,48 +1,53 @@
 {
   "status": "done",
   "assets": {
+    "css/main.6e662db4.css": {
+      "name": "css/main.6e662db4.css",
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/css/main.6e662db4.css",
+      "publicPath": "/static/vue/css/main.6e662db4.css"
+    },
     "favicon.ico": {
       "name": "favicon.ico",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\favicon.ico",
-      "publicPath": "http://localhost:8080/favicon.ico"
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/favicon.ico",
+      "publicPath": "/static/vue/favicon.ico"
     },
     "index.html": {
       "name": "index.html",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\index.html",
-      "publicPath": "http://localhost:8080/index.html"
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/index.html",
+      "publicPath": "/static/vue/index.html"
     },
-    "js/chunk-vendors.js": {
-      "name": "js/chunk-vendors.js",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\chunk-vendors.js",
-      "publicPath": "http://localhost:8080/js/chunk-vendors.js"
+    "js/chunk-vendors.57267357.js": {
+      "name": "js/chunk-vendors.57267357.js",
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/js/chunk-vendors.57267357.js",
+      "publicPath": "/static/vue/js/chunk-vendors.57267357.js"
     },
-    "js/main.js": {
-      "name": "js/main.js",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\main.js",
-      "publicPath": "http://localhost:8080/js/main.js"
+    "js/chunk-vendors.57267357.js.map": {
+      "name": "js/chunk-vendors.57267357.js.map",
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/js/chunk-vendors.57267357.js.map",
+      "publicPath": "/static/vue/js/chunk-vendors.57267357.js.map"
     },
-    "main.6bb15daa4cca505c.hot-update.js": {
-      "name": "main.6bb15daa4cca505c.hot-update.js",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\main.6bb15daa4cca505c.hot-update.js",
-      "publicPath": "http://localhost:8080/main.6bb15daa4cca505c.hot-update.js"
+    "js/main.de0bab2d.js": {
+      "name": "js/main.de0bab2d.js",
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/js/main.de0bab2d.js",
+      "publicPath": "/static/vue/js/main.de0bab2d.js"
     },
-    "main.6bb15daa4cca505c.hot-update.json": {
-      "name": "main.6bb15daa4cca505c.hot-update.json",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\main.6bb15daa4cca505c.hot-update.json",
-      "publicPath": "http://localhost:8080/main.6bb15daa4cca505c.hot-update.json"
+    "js/main.de0bab2d.js.map": {
+      "name": "js/main.de0bab2d.js.map",
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/js/main.de0bab2d.js.map",
+      "publicPath": "/static/vue/js/main.de0bab2d.js.map"
     },
     "main.html": {
       "name": "main.html",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\main.html",
-      "publicPath": "http://localhost:8080/main.html"
+      "path": "/home/julio/Documentos/Buscancun/Buscancun/frontend/static/vue/main.html",
+      "publicPath": "/static/vue/main.html"
     }
   },
   "chunks": {
     "main": [
-      "js/chunk-vendors.js",
-      "js/main.js",
-      "main.6bb15daa4cca505c.hot-update.js"
+      "js/chunk-vendors.57267357.js",
+      "css/main.6e662db4.css",
+      "js/main.de0bab2d.js"
     ]
   },
-  "publicPath": "http://localhost:8080/"
+  "publicPath": "/static/vue/"
 }

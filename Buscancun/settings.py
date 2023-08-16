@@ -132,14 +132,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+VUE_DIR = os.path.join(BASE_DIR, "Buscancun/frontend/static")
+STATICFILES_DIRS = (
+    VUE_DIR,
+)
 
-VUE_DIR = os.path.join(BASE_DIR,"Buscancun/frontend/static/vue/")
 
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'webpack_bundles/',
-        'STATS_FILE': VUE_DIR +'webpack-stats.json',
+        'STATS_FILE': VUE_DIR + '/vue/webpack-stats.json',
         'POLL_INTERVAL': 0.1,
         'TIMEOUT': None,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map'],

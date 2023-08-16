@@ -1,6 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 const BundleTracker = require("webpack-bundle-tracker")
-const path = require('path');
+// const path = require('path');
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -14,7 +14,7 @@ module.exports = defineConfig({
 
   // La ruta donde estará disponible el bundle de los archivos estáticos
   publicPath: process.env.NODE_ENV === 'production'
-      ? 'frontend/static/vue/'
+      ? '/static/vue'
       : 'http://localhost:8080/',
 
   // Directorio donde se creará el bundle de archivos estáticos
@@ -27,7 +27,7 @@ module.exports = defineConfig({
     // El archivo que mapeará los estáticos del proyecto.
     config
         .plugin('BundleTracker')
-        .use(BundleTracker, [{filename: path.join('../vue/', 'webpack-stats.json')}]);
+        .use(BundleTracker, [{filename: '../frontend/static/vue/webpack-stats.json'}]);
 
   },
   devServer: {
