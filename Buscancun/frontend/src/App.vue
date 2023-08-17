@@ -1,27 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h1>xdd</h1>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="text-center">
+    <h1>Bienvenido a Buscaribe</h1>
+  </div>
+  <TableBusComponent />
+  <MapComponent />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MapComponent from "./components/MapComponent.vue";
+import TableBusComponent from "./components/TableBusComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    MapComponent,
+    TableBusComponent,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
