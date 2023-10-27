@@ -5,8 +5,8 @@ from django.contrib import admin
 from apps.sistema.index import IndexHomeView, index_home_view, VueView
 
 urlpatterns = [
-    path('', index_home_view, name="index_home"),
-    path('vue/', VueView.as_view(), name='vue'),
+    # path('', VueView.as_view(), name="index_home"),
+    path('', VueView.as_view(), name='index_home'),
     url(r'^admin/', admin.site.urls),
     path('chofer/', include('apps.chofer.urls')),
 ]

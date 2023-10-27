@@ -1,12 +1,12 @@
 <template>
   <div class="text-center">
-    <h1>Bienvenido a Buscaribe Prueba AMI y Snappshot</h1>
+    <h1>Bienvenido a Buscaribe</h1>
   </div>
-  <div class="row">
-    <div class="col-md-12 p-4">
+  <div class="row" style="margin-right: 0px; margin-left: 0px">
+    <div class="col-12">
       <TableBusComponent />
     </div>
-    <div class="col-md-12">
+    <div class="col-12">
       <MapComponent />
     </div>
   </div>

@@ -1,10 +1,9 @@
-{% load static %}
 {% load render_bundle from webpack_loader %}
-{% block content %}
 {% block title %}
-<title>Autobuses en Tiempo Real </title>
+    <title>Autobuses en Tiempo Real </title>
 {% endblock %}
+{% block content %}
 {% include 'base.html' %}
-<div id="app"></div>
-{% render_bundle 'main' %}
+    <div id="app"></div>
+    {% render_bundle 'main' %}
 {% endblock content %}

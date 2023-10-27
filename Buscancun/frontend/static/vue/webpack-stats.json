@@ -21,15 +21,15 @@
       "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\chunk-vendors.df9c632d.js.map",
       "publicPath": "/static/vue/js/chunk-vendors.df9c632d.js.map"
     },
-    "js/main.6eca5435.js": {
-      "name": "js/main.6eca5435.js",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\main.6eca5435.js",
-      "publicPath": "/static/vue/js/main.6eca5435.js"
+    "js/main.f4807e2d.js": {
+      "name": "js/main.f4807e2d.js",
+      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\main.f4807e2d.js",
+      "publicPath": "/static/vue/js/main.f4807e2d.js"
     },
-    "js/main.6eca5435.js.map": {
-      "name": "js/main.6eca5435.js.map",
-      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\main.6eca5435.js.map",
-      "publicPath": "/static/vue/js/main.6eca5435.js.map"
+    "js/main.f4807e2d.js.map": {
+      "name": "js/main.f4807e2d.js.map",
+      "path": "C:\\Users\\julio\\OneDrive\\Documentos\\buscancun-docker\\Buscancun\\frontend\\static\\vue\\js\\main.f4807e2d.js.map",
+      "publicPath": "/static/vue/js/main.f4807e2d.js.map"
     },
     "main.html": {
       "name": "main.html",
@@ -40,7 +40,7 @@
   "chunks": {
     "main": [
       "js/chunk-vendors.df9c632d.js",
-      "js/main.6eca5435.js"
+      "js/main.f4807e2d.js"
     ]
   },
   "publicPath": "/static/vue/"
